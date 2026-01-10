@@ -1,0 +1,58 @@
+@startuml
+'https://plantuml.com/use-case-diagram
+
+<style>
+  element {
+    MaximumWidth 100
+  }
+</style>
+
+:Родитель: as par
+:Преподаватель: as fac
+:Сотрудник: as staff
+
+rectangle Система {
+
+(UC 1 : Просмотреть оценки ученика) as (1)
+(UC 2 : Проставить оценку) as (2)
+(UC 3 : Добавить домашнюю работу) as (3)
+(UC 4 : Просмотреть домашнюю работу) as (4)
+(UC 5 : Добавить отсутствие) as (5)
+(UC 6 : Просмотреть отсутствия) as (6)
+(UC 7 : Получить отчет) as (7)
+(UC 8 : Написать сообщение на форуме) as (8)
+(UC 9 : Просмотр сообщений на форуме) as (9)
+(UC 10 : Указать причину отсутствия) as (10)
+}
+
+
+
+4 -[hidden]- 5
+4 -[hidden]- 7
+6-[hidden]- 8
+6-[hidden]- 9
+2 -[hidden]- 3
+4 -[hidden]- 8
+5 -[hidden]- 7
+
+par-->1
+par-->4
+par-->6
+par-->10
+
+fac-left->2
+fac-left->3
+
+staff -up-> 5
+staff -up-> 7
+
+par --> 8
+par --> 9
+
+fac -left-> 8
+fac -left-> 9
+
+staff -up-> 8
+staff -up-> 9
+
+@enduml

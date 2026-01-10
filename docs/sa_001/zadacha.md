@@ -3,15 +3,11 @@ order: 1
 title: Задача
 ---
 
-
-
 ## [*Tales Of A Fourth Grade*](http://nealford.com/katas/kata?id=TalesOfAFourthGrade)
 
 Company wants to offer school districts comprehensive student management system as a service
 
 -  Users: faculty, staff and student parents
-
-   
 
    Requirements:
 
@@ -31,8 +27,6 @@ Company wants to offer school districts comprehensive student management system 
 
 -  must adhere to FERPA (Family Educational Rights and Privacy Act) security guidelines, found at \[https://www2.ed.gov/policy/gen/guid/fpco/ferpa/index.html\]
 
-   
-
    Additional Context:
 
 -  company plans to undertake an aggressive national sales campaign
@@ -42,8 +36,6 @@ Company wants to offer school districts comprehensive student management system 
 -  new CIO
 
 -  main marketing pitch is around is flexibility, configurability, and (recently added) security
-
-  
 
 
 
