@@ -11,6 +11,10 @@ entity "Оценка" as mark {
 Значение
 }
 
+entity "Учитель" as teacher {
+ФИО
+}
+
 entity "Предмет" as subject {
 Название
 }
@@ -66,5 +70,7 @@ admin *-- topic
 parent *-- topic
 admin *-- message
 parent *-- message
+teacher *-- mark
+teacher -- subject
 
 @enduml
