@@ -17,7 +17,11 @@ title: Микросервисная архитектура (1-й вариант 
 
 -  Сервис отчетности
 
-[plant-uml:./mikroservisnaya-arkhitektura-1-y-variant-dekompo.puml::1388px:334px]
+[plant-uml:./mikroservisnaya-arkhitektura-1-y-variant-dekompo.puml::543px:522px]
+
+
+
+[plant-uml:./mikroservisnaya-arkhitektura-1-y-variant-dekompo-2.puml::645px:301px]
 
 **Оценка модифицируемости:**
 

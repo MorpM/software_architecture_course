@@ -36,34 +36,14 @@ entity "Сообщение_темы_форума" as message {
 }
 }
 
-rectangle "Сервис профилей" {
-entity "Ученик" as student {
-ФИО
-Школа
-Класс
-}
 
-entity "Родитель" as parent {
-ФИО
-}
 
-entity "Сотрудник_школы" as admin {
-ФИО
-Должность
-}
-}
 
-rectangle "Сервис отчетности" {
-entity "Отчет" as report{
-Тип
-Дата_создания
-Сотрудник_школы_сформировал
-Ссылка_для_скачивания
-}
-}
 
-student *-- parent
+
 topic *-- message
 mark --* subject
+subject -[hidden]- absence
+
 
 @enduml
