@@ -15,7 +15,7 @@ title: Декомпозиция по ролям пользователей (2-й
 
 -  Административная панель (управление пользователями, генерация отчетов, настройки системы)
 
-[plant-uml:./dekompoziciya-po-rolyam-polzovateley-2-y-variant.puml::590px:722px]
+[plant-uml:./dekompoziciya-po-rolyam-polzovateley-2-y-variant.puml::632px:846px]
 
 **Оценка модифицируемости:**
 

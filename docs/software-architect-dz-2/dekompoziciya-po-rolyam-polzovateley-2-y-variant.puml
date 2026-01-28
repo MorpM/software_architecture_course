@@ -15,7 +15,7 @@ entity "Учитель" as teacher {
 ФИО
 }
 
-entity "Предмет" as subject {
+entity "Предмет " as subject {
 Название
 }
 

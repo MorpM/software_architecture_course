@@ -1,0 +1,10 @@
+creator: MorpM <ip.horoshilov@gmail.com>
+targetBranch: master
+createdAt: '2026-01-28 20:57:31'
+approvers:
+- user: MorpM <ip.horoshilov@gmail.com>
+  approvedAt: '2026-01-28 21:06:08'
+options:
+  deleteAfterMerge: false
+  squash: true
+description: Устранение замечаний к домашней работе №2
