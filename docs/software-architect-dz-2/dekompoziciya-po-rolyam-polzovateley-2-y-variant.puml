@@ -1,0 +1,76 @@
+@startuml
+
+
+entity "Отсутствие" as absence {
+Дата
+Причина
+}
+
+entity "Оценка" as mark {
+Дата
+Значение
+}
+
+entity "Учитель" as teacher {
+ФИО
+}
+
+entity "Предмет" as subject {
+Название
+}
+
+
+
+entity "Тема_форума" as topic{
+Название
+Дата_создания
+Автор
+}
+
+entity "Сообщение_темы_форума" as message {
+Текст
+Дата_создания
+Автор
+}
+
+
+entity "Ученик" as student {
+ФИО
+Школа
+Класс
+}
+
+entity "Родитель" as parent {
+ФИО
+}
+
+entity "Сотрудник_школы" as admin {
+ФИО
+Должность
+}
+
+
+
+entity "Отчет" as report{
+Тип
+Дата_создания
+Сотрудник_школы_сформировал
+Ссылка_для_скачивания
+}
+
+
+student *-- parent
+topic *-- message
+mark --* subject
+mark --* student
+absence --* student
+absence --o parent
+admin -- report
+admin *-- topic
+parent *-- topic
+admin *-- message
+parent *-- message
+teacher *-- mark
+teacher -- subject
+
+@enduml
