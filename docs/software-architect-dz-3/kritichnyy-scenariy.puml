@@ -1,0 +1,27 @@
+@startuml
+autonumber
+skinparam maxMessageSize 100
+
+title "UC - 01 после оптимизации"
+
+actor "Родитель" as parent
+participant "Сервис оценок" as marks
+database "Prepared response" as db
+participant "Сервис профилей" as profile
+
+parent -> marks : Запрос оценок ученика
+marks -> profile : пользователь является родителем ученика?
+marks <-- profile : ответ
+
+alt является родителем
+marks -> db : запрос списка оценок
+marks <-- db : список оценок
+
+else не является
+parent <-- marks : Ошибка доступа
+
+
+end
+
+
+@enduml

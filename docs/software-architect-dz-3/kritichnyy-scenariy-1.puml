@@ -1,0 +1,28 @@
+@startuml
+autonumber
+skinparam maxMessageSize 100
+
+title "UC - 01"
+
+actor "Родитель" as parent
+participant "Сервис оценок" as marks
+participant "Сервис профилей" as profile
+
+parent -> marks : Запрос оценок ученика
+marks -> profile : пользователь является родителем ученика?
+marks <-- profile : ответ
+
+alt является родителем
+marks -> marks : список оценок
+marks -> profile : запрос ФИО учителей по id  
+marks <-- profile : ФИО учителей
+parent <-- marks : Список оценок ученика
+
+else не является
+parent <-- marks : Ошибка доступа
+
+
+end
+
+
+@enduml
