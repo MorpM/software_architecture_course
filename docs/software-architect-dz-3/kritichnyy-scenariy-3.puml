@@ -1,0 +1,34 @@
+@startuml
+autonumber
+skinparam maxMessageSize 100
+
+title "UC - 02 после оптимизации"
+
+actor "Учитель" as teacher
+participant "Сервис оценок" as marks
+
+database "БД сервиса оценок" as db
+queue "Очередь" as asynk 
+participant "Сервис обработки" as worker
+participant "Сервис профилей" as profile
+
+database "Prepared answer" as newdb
+
+teacher -> marks : Передать оценку ученика
+marks -> db : Сохранить данные
+alt запись успешна
+marks <-- db : Успешно
+marks -> asynk : сообщение с новой оценкой
+teacher <-- marks : Успешно
+else 
+marks <-- db : Ошибка
+teacher <-- marks : Ошибка
+end
+
+asynk ->> worker : Сообщение с новой оценкой
+worker -> profile : запросить данные учителя
+worker <-- profile : ответ
+worker -> worker : подготовить данные для записи
+worker -> newdb : записать данные
+
+@enduml

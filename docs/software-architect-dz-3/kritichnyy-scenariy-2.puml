@@ -1,0 +1,21 @@
+@startuml
+autonumber
+skinparam maxMessageSize 100
+
+title "UC - 02 до оптимизации"
+
+actor "Учитель" as teacher
+participant "Сервис оценок" as marks
+database "БД сервиса оценок" as db
+
+teacher -> marks : Передать оценку ученика
+marks -> db : Сохранить данные
+alt запись успешна
+marks <-- db : Успешно
+teacher <-- marks : Успешно
+else 
+marks <-- db : Ошибка
+teacher <-- marks : Ошибка
+end
+
+@enduml
